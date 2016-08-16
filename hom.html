@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--this is the chosen stylesheet of the page -->
+<style>
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    text-align: center;
+}
+
+.flex-container > * {
+    padding: 15px;
+    -webkit-flex: 1 100%;
+    flex: 1 100%;
+}
+
+.article {
+    text-align: left;
+}
+
+header {background: black;color:white;}
+footer {background: #aaa;color:white;}
+.nav {background:#eee;}
+
+.nav ul {
+    list-style-type: none;
+ padding: 0;
+}
+   
+.nav ul a {
+ text-decoration: none;
+}
+
+@media all and (min-width: 768px) {
+    .nav {text-align:left;-webkit-flex: 1 auto;flex:1 auto;-webkit-order:1;order:1;}
+    .article {-webkit-flex:5 0px;flex:5 0px;-webkit-order:2;order:2;}
+    footer {-webkit-order:3;order:3;}
+}
+</style>
+</head>
+<body>
+
+<div class="flex-container">
+<header>
+<!-- page title -->
+  <h1>RECRUITMENT PORTAL</h1>
+</header>
+
+
+
+<nav class="nav">
+
+<ul>
+<!--the menu is created and the menu items hrefenced to the relevant web pages    -->
+  <li><a href="search.php">Applicants</a></li>
+  <li><a href="ROLE.php">Vacancies</a></li>
+  <li><a href="rolesapplied.php">Applications</a></li>
+</ul>
+</nav>
+
+<article class="article">
+<body>
+
+<p id="Date"></p>
+
+<script>
+// this is the date JS code.
+document.getElementById("Date").innerHTML = Date();
+</script>
+
+
+
+
+</body
+<!--title and body of the paragraph -->
+  <h1>Welcome to our Recruitment Portal</h1>
+  <p>In this Recruitment Portal, you will be able to view the vacancies, applicants details and applications. The portal will allow you to
+  search for the applicants and to check how many applications have been received for a particular vacancy.</p>
+  
+  <p> We hope you will find it easy to use this portal and any quiries please contact the technical department</p>
+  
+</article>
+<br>
+
+
+
+
+
+<!--footer -->
+<footer>Copyright © Washington Bhebhe</footer>
+</div>
+
+</body>
+</html>
+

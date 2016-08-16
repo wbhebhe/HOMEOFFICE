@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<mata charse = "utf-8"/>
+<title>Login</title>
+<script type = "text/javascript">
+//function to get the username and the password from the form by id. the posted inputs are verified and the user allowed or not allowed to enter the site.
+function check_info (){
+var username = document.getElementById('username').value;
+var password = document.getElementById('password').value;
+
+if(username == "admin"|| password == "admin"){
+//errors.style.color = "red";
+
+return true;
+}
+else{
+// javascript alerts the user to input the correct credentials. 
+return false;
+alert('please feel all fields');
+}
+}
+
+
+
+</script>
+</head>
+<br>
+
+
+
+</br>
+
+<body bgcolor = "#FFFFFF">
+	<!--this is the login form using the post method to forward the inputs to the javascript function above. -->
+      <div align = "center">
+         <div style = "width:300px; border: solid 1px #333333; " align = "left">
+            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Login</b></div>
+				
+            <div style = "margin:30px">
+               
+               <form action = "hom.html" method ="post" onsubmit = "return check_info();">
+                  <label>UserName  :</label><input type = "text" name = "username" id = "username"class = "box"/><br /><br />
+                  <label>Password  :</label><input type = "password" name = "password" id ="password"class = "box" /><br/><br />
+                  <input type = "submit" value = " Submit "/><br />
+               </form>
+               
+               <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
+					
+            </div>
+				
+         </div>
+			
+      </div>
+
+   </body>
+</html>
